@@ -52,3 +52,6 @@
   border-radius: var(--border-radius);
 }
 
+.hidden {
+  display: none;
+}
