@@ -7,8 +7,10 @@ import './styles/main.css';
 import './styles/variables.css';
 import { initializeFilters } from './features/filter-form/filter-form.js';
 import { setStatistics } from './features/statistics/statistics.js';
+import { initializePagination } from './features/pagination/pagination.js';
 
 initializeEmployeesState(employeesData);
 renderEmployeeList();
 initializeFilters();
 setStatistics();
+initializePagination();
