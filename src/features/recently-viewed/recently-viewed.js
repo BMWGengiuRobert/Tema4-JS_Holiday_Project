@@ -1,10 +1,15 @@
-//  HELPER COMMENT: Example starter code for recently viewed feature
-// this is just a placeholder file to get you started
-// you can use the selected elements to do the logic of updating the recently viewed list
-// and attach it as a callback to the employee card click event
+import { getEmployeeById, getState } from '../../state/state.js';
 
-const recentlyViewedList = document.getElementById('recently-viewed-list');
+const recentlyViewedList = document.getElementById('recent-employees');
 
 export function updateRecentlyViewedList() {
+  recentlyViewedList.replaceChildren();
+  const recentIds = getState().recentlyViewed;
 
+  recentIds.forEach((id) => {
+    const currentEmployee = getEmployeeById(id);
+    const li = document.createElement('li');
+    li.textContent = `${currentEmployee.name}`;
+    recentlyViewedList.append(li);
+  });
 }

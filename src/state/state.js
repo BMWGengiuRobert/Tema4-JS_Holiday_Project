@@ -10,6 +10,8 @@ let state = {
   recentlyViewed: [],
 };
 
+const recentlyViewedLimit = 5;
+
 /**
  * Get a copy of the entire state
  * @returns {Object} Copy of current state
@@ -109,7 +111,18 @@ export function setCurrentPage(page) {
  * @param {string} employeeId - Employee ID to add
  */
 export function addToRecentlyViewed(employeeId) {
- // add logic here
+  let newRecentlyViewed = [...state.recentlyViewed];
+  newRecentlyViewed = newRecentlyViewed.filter((id) => id !== employeeId);
+  newRecentlyViewed.unshift(employeeId);
+
+  if (newRecentlyViewed.length > recentlyViewedLimit) {
+    newRecentlyViewed.pop();
+  }
+
+  state = {
+    ...state,
+    recentlyViewed: newRecentlyViewed,
+  };
 }
 
 /**
@@ -117,7 +130,7 @@ export function addToRecentlyViewed(employeeId) {
  * @param {Object} updatedEmployee - Employee object with updated data
  */
 export function updateEmployeeInState(updatedEmployee) {
-   // add logic here if you reach this point
+  // add logic here if you reach this point
 }
 
 /**

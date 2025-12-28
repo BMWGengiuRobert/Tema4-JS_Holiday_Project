@@ -1,3 +1,6 @@
+import { addToRecentlyViewed } from '../../state/state';
+import { updateRecentlyViewedList } from '../recently-viewed/recently-viewed';
+
 export function createEmployeeCard(employee, clickHandler) {
   const card = document.createElement('article');
 
@@ -31,6 +34,7 @@ export function createEmployeeCard(employee, clickHandler) {
   // creating div for employee details, add it to card
   const employeeDetailsDiv = document.createElement('div');
   employeeDetailsDiv.classList.add('employee-details');
+  employeeDetailsDiv.classList.add('hidden');
   employeeDetailsDiv.id = `details-${employee.id}`;
   card.append(employeeDetailsDiv);
 
@@ -68,9 +72,14 @@ export function createEmployeeCard(employee, clickHandler) {
   const details = card.querySelector('.employee-details');
 
   header.addEventListener('click', () => {
+    const isHidden = details.classList.contains('hidden');
     toggleAccordion(header, details);
     if (clickHandler) {
       clickHandler(employee);
+    }
+    if (isHidden) {
+      addToRecentlyViewed(employee.id);
+      updateRecentlyViewedList();
     }
   });
 
