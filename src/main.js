@@ -6,7 +6,9 @@ import 'bootstrap-icons/font/bootstrap-icons.min.css';
 import './styles/main.css';
 import './styles/variables.css';
 import { initializeFilters } from './features/filter-form/filter-form.js';
+import { setStatistics } from './features/statistics/statistics.js';
 
 initializeEmployeesState(employeesData);
 renderEmployeeList();
 initializeFilters();
+setStatistics();
