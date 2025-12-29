@@ -76,4 +76,26 @@ form {
       }
     }
   }
+
+  @include mobile {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    gap: $spacing-medium;
+
+    .form-buttons {
+      display: contents;
+      button {
+        &:first-child {
+          grid-column: 1;
+          grid-row: 3;
+        }
+
+        &:last-child {
+          grid-column: 1;
+          grid-row: 4;
+        }
+      }
+    }
+  }
 }

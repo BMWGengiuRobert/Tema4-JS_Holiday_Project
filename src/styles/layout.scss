@@ -24,6 +24,17 @@ body {
       'aside aside'
       'footer footer';
   }
+
+  @include mobile {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'header'
+      'nav'
+      'main'
+      'aside'
+      'footer';
+  }
 }
 
 header {
