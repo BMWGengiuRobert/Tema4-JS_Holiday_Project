@@ -24,6 +24,11 @@ export function createEmployeeCard(employee, clickHandler) {
   const statusBadgeSpan = document.createElement('span');
   statusBadgeSpan.classList.add('status-badge');
   statusBadgeSpan.textContent = `${employee.status}`;
+  if (employee.status === 'good') {
+    statusBadgeSpan.classList.add('good');
+  } else if (employee.status === 'naughty') {
+    statusBadgeSpan.classList.add('naughty');
+  }
   div.append(statusBadgeSpan);
 
   // creating icon element, add it to header right div

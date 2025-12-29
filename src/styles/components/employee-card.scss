@@ -1,0 +1,86 @@
+article {
+  border: 2px solid $color-border;
+  background-color: $color-light-gray;
+  border-radius: $border-radius;
+  box-shadow: 0 1px 2px $color-shadow;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-small;
+
+  h3 {
+    margin-bottom: $spacing-small;
+  }
+
+  .employee-card-button {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    text-align: left;
+    font-family: inherit;
+    padding: $spacing-medium;
+
+    .employee-name {
+      font-weight: bold;
+      font-size: 16px;
+      color: $color-dark-gray;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: $spacing-small;
+
+      .status-badge {
+        padding: 4px 12px;
+        border-radius: $border-radius;
+        font-weight: bold;
+        color: $color-snow-white;
+        text-transform: uppercase;
+        border-radius: 100px;
+        white-space: nowrap;
+        letter-spacing: 0.1em;
+
+        &.good {
+          background-color: $color-christmas-green;
+        }
+
+        &.naughty {
+          background-color: $color-christmas-red;
+        }
+      }
+
+      i {
+        font-size: 16px;
+        color: $color-dark-gray;
+      }
+    }
+  }
+
+  .employee-details {
+    border-top: 1px solid $color-border;
+    background-color: $color-snow-white;
+
+    dl {
+      display: grid;
+      grid-template-columns: max-content 1fr;
+      column-gap: $spacing-large;
+      row-gap: $spacing-small;
+      padding: $spacing-medium;
+
+      dt {
+        font-weight: bold;
+        color: $color-dark-gray;
+        white-space: nowrap;
+      }
+
+      dd {
+        color: $color-dark-gray;
+      }
+    }
+  }
+}

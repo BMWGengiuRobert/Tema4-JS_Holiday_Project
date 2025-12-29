@@ -46,6 +46,12 @@ main {
       font-weight: bold;
     }
   }
+
+  [role='list'] {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-medium;
+  }
 }
 
 aside {
