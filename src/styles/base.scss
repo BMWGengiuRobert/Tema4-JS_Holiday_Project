@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Inter', 'Poppins', Arial, sans-serif;
   background-color: $color-light-gray;
   color: $color-dark-gray;
 }
@@ -23,4 +23,5 @@ button {
   border: 2px solid transparent;
   padding: $spacing-small $spacing-medium;
   border-radius: $border-radius;
+  font-family: 'Inter', 'Poppins', Arial, sans-serif;
 }

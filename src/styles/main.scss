@@ -1,7 +1,7 @@
 // Variables styles import
 @import 'variables';
 
-// Breakpoints mixins (după variables, înainte de toate celelalte!)
+// Breakpoints mixins
 @import 'breakpoints';
 
 // Base styles import
@@ -15,6 +15,7 @@
 @import 'components/statistics.scss';
 @import 'components/pagination.scss';
 @import 'components/employee-card.scss';
+@import 'components/modal.scss';
 
 // Utilities styles import
 @import 'utilities';

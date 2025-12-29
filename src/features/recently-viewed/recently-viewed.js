@@ -8,6 +8,11 @@ export function updateRecentlyViewedList() {
 
   recentIds.forEach((id) => {
     const currentEmployee = getEmployeeById(id);
+
+    if (!currentEmployee) {
+      return;
+    }
+
     const li = document.createElement('li');
     li.textContent = `${currentEmployee.name}`;
     recentlyViewedList.append(li);

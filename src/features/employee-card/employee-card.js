@@ -1,5 +1,7 @@
 import { addToRecentlyViewed } from '../../state/state';
 import { updateRecentlyViewedList } from '../recently-viewed/recently-viewed';
+import { openEditModal } from '../edit-modal/edit-modal.js';
+import { openDeleteModal } from '../delete-modal/delete-modal.js';
 
 export function createEmployeeCard(employee, clickHandler) {
   const card = document.createElement('article');
@@ -72,6 +74,30 @@ export function createEmployeeCard(employee, clickHandler) {
   const ddNotes = document.createElement('dd');
   ddNotes.textContent = `${employee.notes}`;
   dl.append(ddNotes);
+
+  const editButton = document.createElement('button');
+  const editIcon = document.createElement('i');
+  editIcon.classList.add('bi', 'bi-pencil');
+  editButton.classList.add('btn-primary');
+  editButton.title = 'Edit Employee';
+  editButton.appendChild(editIcon);
+  employeeDetailsDiv.appendChild(editButton);
+
+  editButton.addEventListener('click', () => {
+    openEditModal(employee);
+  });
+
+  const deleteButton = document.createElement('button');
+  const deleteIcon = document.createElement('i');
+  deleteIcon.classList.add('bi', 'bi-trash');
+  deleteButton.classList.add('btn-primary');
+  deleteButton.title = 'Delete Employee';
+  deleteButton.appendChild(deleteIcon);
+  employeeDetailsDiv.appendChild(deleteButton);
+
+  deleteButton.addEventListener('click', () => {
+    openDeleteModal(employee);
+  });
 
   const header = card.querySelector('.employee-card-button');
   const details = card.querySelector('.employee-details');

@@ -130,7 +130,25 @@ export function addToRecentlyViewed(employeeId) {
  * @param {Object} updatedEmployee - Employee object with updated data
  */
 export function updateEmployeeInState(updatedEmployee) {
-  // add logic here if you reach this point
+  const index = state.allEmployees.findIndex(
+    (emp) => emp.id === updatedEmployee.id
+  );
+  state.allEmployees[index] = { ...updatedEmployee };
+
+  const filteredIndex = state.filteredEmployees.findIndex(
+    (emp) => emp.id === updatedEmployee.id
+  );
+  state.filteredEmployees[filteredIndex] = { ...updatedEmployee };
+}
+
+export function deleteEmployeeFromState(employeeId) {
+  state.allEmployees = state.allEmployees.filter(
+    (emp) => emp.id !== employeeId
+  );
+  state.filteredEmployees = state.filteredEmployees.filter(
+    (emp) => emp.id !== employeeId
+  );
+  state.recentlyViewed = state.recentlyViewed.filter((id) => id !== employeeId);
 }
 
 /**
