@@ -1,0 +1,59 @@
+@use 'variables' as *;
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-areas:
+    'header header header'
+    'nav nav nav'
+    'aside main main'
+    'footer footer footer';
+  gap: $spacing-medium;
+  min-height: 100vh;
+  padding: $spacing-medium;
+  background-color: $color-light-gray;
+}
+
+.header {
+  grid-area: header;
+  background: $color-christmas-green;
+  color: $color-snow-white;
+  padding: $spacing-large;
+  text-align: center;
+  border-radius: $border-radius;
+}
+
+.nav {
+  grid-area: nav;
+  background-color: $color-snow-white;
+  padding: $spacing-large;
+  border-radius: $border-radius;
+}
+
+.main {
+  grid-area: main;
+  background-color: $color-snow-white;
+  padding: $spacing-large;
+  border-radius: $border-radius;
+}
+
+.aside {
+  grid-area: aside;
+  background-color: $color-snow-white;
+  padding: $spacing-large;
+  border-radius: $border-radius;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: $color-christmas-green;
+  color: $color-snow-white;
+  text-align: center;
+  padding: $spacing-medium;
+  border-radius: $border-radius;
+}
+
+.hidden {
+  display: none;
+}
