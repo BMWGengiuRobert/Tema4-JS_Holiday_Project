@@ -1,0 +1,16 @@
+.pagination {
+  align-self: last baseline;
+  margin-top: $spacing-medium;
+  display: flex;
+  gap: $spacing-small;
+  align-items: center;
+
+  button {
+    &:disabled {
+      background-color: $color-border;
+      color: $color-dark-gray;
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
+  }
+}

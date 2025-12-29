@@ -35,6 +35,17 @@ main {
   background-color: $color-snow-white;
   padding: $spacing-large;
   border-radius: $border-radius;
+
+  .results-section {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-medium;
+
+    p,
+    span {
+      font-weight: bold;
+    }
+  }
 }
 
 aside {

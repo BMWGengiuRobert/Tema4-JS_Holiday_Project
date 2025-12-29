@@ -26,7 +26,7 @@ export function renderEmployeeList() {
     employeesListElement.appendChild(card);
   });
 
-  resultCountElement.textContent = filteredEmployees.length;
+  resultCountElement.textContent = 'Results: ' + filteredEmployees.length;
 
   updatePagination();
 }
