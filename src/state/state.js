@@ -1,7 +1,3 @@
-//  HELPER COMMENT: Private state - should not be accessed directly
-// use the provided getter and setter functions to interact with the state
-// add your own if u need more functionality ;)
-
 let state = {
   allEmployees: [],
   filteredEmployees: [],
