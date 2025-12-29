@@ -1,15 +1,29 @@
 body {
-  display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
-  grid-template-rows: auto auto 1fr auto;
-  grid-template-areas:
-    'header header header'
-    'nav nav nav'
-    'aside main main'
-    'footer footer footer';
   gap: $spacing-medium;
   min-height: 100vh;
   padding: $spacing-medium;
+
+  @include desktop {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+      'header header header'
+      'nav nav nav'
+      'aside main main'
+      'footer footer footer';
+  }
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      'header header'
+      'nav nav'
+      'main main'
+      'aside aside'
+      'footer footer';
+  }
 }
 
 header {

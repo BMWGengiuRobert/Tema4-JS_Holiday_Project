@@ -1,6 +1,9 @@
 // Variables styles import
 @import 'variables';
 
+// Breakpoints mixins (după variables, înainte de toate celelalte!)
+@import 'breakpoints';
+
 // Base styles import
 @import 'base';
 
