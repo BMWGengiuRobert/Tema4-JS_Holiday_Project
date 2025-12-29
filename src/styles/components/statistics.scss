@@ -1,0 +1,21 @@
+aside {
+  .stat-item {
+    margin-bottom: $spacing-medium;
+    padding: $spacing-small;
+    background-color: $color-light-gray;
+    border-radius: $border-radius;
+    display: flex;
+    justify-content: space-between;
+
+    span {
+      font-weight: bold;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    li {
+      margin-bottom: $spacing-small;
+    }
+  }
+}

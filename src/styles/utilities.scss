@@ -2,16 +2,12 @@
   display: none;
 }
 
-.text-center {
-  text-align: center;
+.text-color-red {
+  color: $color-christmas-red;
 }
 
-.mt-small {
-  margin-top: $spacing-small;
-}
-
-.mb-small {
-  margin-bottom: $spacing-small;
+.text-color-green {
+  color: $color-christmas-green;
 }
 
 .btn-primary {
