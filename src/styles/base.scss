@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: $color-light-gray;
+  color: $color-dark-gray;
+}
+
+h1,
+h2,
+h3 {
+  margin-bottom: $spacing-medium;
+}
+
+button {
+  cursor: pointer;
+  transition: all $transition-speed ease;
+  color: $color-snow-white;
+  border: 2px solid transparent;
+  padding: $spacing-small $spacing-medium;
+  border-radius: $border-radius;
+}

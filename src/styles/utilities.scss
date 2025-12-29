@@ -1,0 +1,31 @@
+.hidden {
+  display: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-small {
+  margin-top: $spacing-small;
+}
+
+.mb-small {
+  margin-bottom: $spacing-small;
+}
+
+.btn-primary {
+  background-color: $color-christmas-red;
+
+  &:hover {
+    background-color: $color-christmas-red-darker;
+  }
+}
+
+.btn-secondary {
+  background-color: $color-dark-gray;
+
+  &:hover {
+    background-color: $color-dark-gray-darker;
+  }
+}

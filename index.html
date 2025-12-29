@@ -8,7 +8,9 @@
   </head>
   <body>
     <header>
-      <h1><i class="bi bi-gift inline-icon"></i> Santa's Naughty & Nice List</h1>
+      <h1>
+        <i class="bi bi-gift inline-icon"></i> Santa's Naughty & Nice List
+      </h1>
       <p>Review employees' behavior and manage gift delivery</p>
     </header>
 
@@ -35,8 +37,10 @@
         </div>
 
         <div class="form-buttons">
-          <button type="submit">Apply Filters</button>
-          <button type="button" id="reset-filters">Reset</button>
+          <button type="submit" class="btn-primary">Apply Filters</button>
+          <button type="button" id="reset-filters" class="btn-secondary">
+            Reset
+          </button>
         </div>
       </form>
     </nav>
@@ -45,19 +49,41 @@
       <section class="results-section">
         <h2>Employees List</h2>
         <p id="result-count" aria-live="polite">Results: 0</p>
-        
-        <div id="pagination-top" class="pagination pagination-top" role="navigation" aria-label="Pagination">
-          <button id="prev-page-top" aria-label="Previous page" type="button">Previous</button>
+
+        <div
+          id="pagination-top"
+          class="pagination pagination-top"
+          role="navigation"
+          aria-label="Pagination"
+        >
+          <button id="prev-page-top" aria-label="Previous page" type="button">
+            Previous
+          </button>
           <span id="page-info-top" aria-live="polite">Page 1 of 1</span>
-          <button id="next-page-top" aria-label="Next page" type="button">Next</button>
+          <button id="next-page-top" aria-label="Next page" type="button">
+            Next
+          </button>
         </div>
 
         <div id="employees-list" role="list"></div>
 
-        <div id="pagination-bottom" class="pagination" role="navigation" aria-label="Pagination">
-          <button id="prev-page-bottom" aria-label="Previous page" type="button">Previous</button>
+        <div
+          id="pagination-bottom"
+          class="pagination"
+          role="navigation"
+          aria-label="Pagination"
+        >
+          <button
+            id="prev-page-bottom"
+            aria-label="Previous page"
+            type="button"
+          >
+            Previous
+          </button>
           <span id="page-info-bottom" aria-live="polite">Page 1 of 1</span>
-          <button id="next-page-bottom" aria-label="Next page" type="button">Next</button>
+          <button id="next-page-bottom" aria-label="Next page" type="button">
+            Next
+          </button>
         </div>
       </section>
     </main>

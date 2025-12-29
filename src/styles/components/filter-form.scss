@@ -1,0 +1,49 @@
+form {
+  display: flex;
+  gap: $spacing-medium;
+  align-items: flex-end;
+
+  .filter-group {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  label {
+    margin-bottom: $spacing-small;
+    font-weight: bold;
+  }
+
+  .form-buttons {
+    display: flex;
+    gap: $spacing-medium;
+
+    button {
+      font-size: 16px;
+
+      &:active {
+        border-color: $color-gold;
+      }
+    }
+  }
+
+  [id$='-filter'] {
+    padding: $spacing-small;
+    border: 1px solid $color-border;
+    border-radius: $border-radius;
+    font-size: 16px;
+
+    &:focus {
+      outline: none;
+      border-color: $color-christmas-red;
+      box-shadow: 0 0 5px $color-shadow;
+      transition:
+        border-color $transition-speed ease,
+        box-shadow $transition-speed ease;
+    }
+  }
+
+  option:focus {
+    background-color: $color-light-gray;
+  }
+}
