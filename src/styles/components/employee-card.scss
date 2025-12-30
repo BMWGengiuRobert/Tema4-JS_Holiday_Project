@@ -1,3 +1,5 @@
+@use '../variables' as *;
+
 article {
   border: 2px solid $color-border;
   background-color: $color-light-gray;

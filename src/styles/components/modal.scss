@@ -1,3 +1,6 @@
+@use '../variables' as *;
+@use '../breakpoints' as *;
+
 .modal {
   position: fixed;
   top: 0;

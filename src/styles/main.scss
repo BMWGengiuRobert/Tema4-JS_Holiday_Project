@@ -1,21 +1,15 @@
-// Variables styles import
-@import 'variables';
-
-// Breakpoints mixins
-@import 'breakpoints';
-
 // Base styles import
-@import 'base';
+@use 'base';
 
 // Layout styles import
-@import 'layout';
+@use 'layout';
 
 // Components styles import
-@import 'components/filter-form.scss';
-@import 'components/statistics.scss';
-@import 'components/pagination.scss';
-@import 'components/employee-card.scss';
-@import 'components/modal.scss';
+@use 'components/filter-form.scss';
+@use 'components/statistics.scss';
+@use 'components/pagination.scss';
+@use 'components/employee-card.scss';
+@use 'components/modal.scss';
 
 // Utilities styles import
-@import 'utilities';
+@use 'utilities';

@@ -1,3 +1,5 @@
+@use '../variables' as *;
+
 aside {
   .stat-item {
     margin-bottom: $spacing-medium;
