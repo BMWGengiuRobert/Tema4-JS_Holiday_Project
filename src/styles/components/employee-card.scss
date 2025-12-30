@@ -17,12 +17,16 @@ article {
     justify-content: space-between;
     align-items: center;
     background: none;
-    border: none;
+    border: 2px solid transparent;
     padding: 0;
     cursor: pointer;
     text-align: left;
     font-family: inherit;
     padding: $spacing-medium;
+
+    &:active {
+      border-color: $color-gold;
+    }
 
     .employee-name {
       font-weight: bold;

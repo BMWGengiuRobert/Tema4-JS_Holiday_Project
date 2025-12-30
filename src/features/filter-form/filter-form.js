@@ -56,9 +56,5 @@ export function initializeFilters() {
     applyFilters();
   });
 
-  statusFilter.addEventListener('change', applyFilters);
-
-  searchFilter.addEventListener('input', applyFilters);
-
   resetButton.addEventListener('click', handelFormReset);
 }
